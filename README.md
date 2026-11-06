@@ -88,6 +88,35 @@ python -m pip install -r requirements.txt
 
 Run all commands from the project root.
 
+### Frontend
+
+The React, TypeScript, and Mantine frontend supports:
+
+- Uploading reference and student MIDI files
+- Using an included C major scale as the reference
+- Running an example without uploading files
+- Viewing category scores and individual note feedback
+
+Start the FastAPI server using the API instructions above.
+
+In a second terminal, from the project root:
+
+```powershell
+cd frontend
+npm.cmd install
+npm.cmd run dev
+```
+
+Open the local URL printed by Vite. Keep both servers running.
+
+To check TypeScript and build the frontend:
+
+```powershell
+npm.cmd run build
+```
+
+The local frontend uses Vite's proxy to connect to FastAPI on port 8000.
+
 ### Terminal
 
 Run the included sample comparison:
@@ -143,4 +172,5 @@ The suite includes 14 tests covering:
 - `tests/test_analyzer.py`: Tests note alignment and scoring behavior.
 - `tests/test_api.py`: Tests API requests, upload validation, and responses.
 - `requirements.txt`: Lists the Python dependencies.
+- `frontend/`: React and TypeScript interface built with Mantine.
 
